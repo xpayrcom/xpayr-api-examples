@@ -37,6 +37,10 @@ Use an XPayr test key before live credentials. Never expose `sk_test_*`, `sk_liv
 
 Read [SECURITY.md](SECURITY.md) before reporting a vulnerability. Payment completion must be based on verified XPayr webhook/API state and canonical on-chain evidence, not browser callbacks alone.
 
+## Live testnet verification
+
+The `XPayr Testnet smoke` workflow uses a restricted `sk_test_*` repository-environment secret. It validates the live network catalog, creates a small pending Arc Testnet USDC session, reads the session back, and renders hosted checkout. It never signs a transaction or moves funds.
+
 ## License
 
 MIT. See [LICENSE](LICENSE).

@@ -1,4 +1,5 @@
 .env
+artifacts/
 .env.*
 !.env.example
 node_modules/

@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "test": "node --test tests/*.test.mjs",
-    "validate": "npm test && node --check examples/node/create-payment.mjs && node --check examples/node/get-payment.mjs && node --check examples/webhook/verify-node.mjs"
+    "validate": "npm test && node --check examples/node/create-payment.mjs && node --check examples/node/get-payment.mjs && node --check examples/webhook/verify-node.mjs && node --check scripts/testnet-smoke.mjs",
+    "smoke:testnet": "node scripts/testnet-smoke.mjs"
   },
   "engines": {
     "node": ">=18"
