@@ -39,7 +39,7 @@ Read [SECURITY.md](SECURITY.md) before reporting a vulnerability. Payment comple
 
 ## Live testnet verification
 
-The `XPayr Testnet smoke` workflow uses a restricted `sk_test_*` repository-environment secret. It validates the live network catalog, creates a small pending Arc Testnet USDC session, reads the session back, and renders hosted checkout. It never signs a transaction or moves funds.
+The `XPayr Testnet smoke` workflow uses a restricted `sk_test_*` repository-environment secret and a dedicated low-balance Arc Testnet wallet. It validates the live network catalog, creates a `0.001000 USDC` session, reads the session back, renders hosted checkout, completes that exact session through the pinned XPayr lifecycle action, verifies the `PaymentSplit` event and balance deltas, and requires both backend and public status to reconcile as `completed`. Mainnet is hard-disabled and the secret-free evidence artifact is retained for 14 days.
 
 ## License
 

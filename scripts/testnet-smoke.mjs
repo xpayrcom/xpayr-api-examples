@@ -47,7 +47,7 @@ assert.ok(arc.currencies?.some((currency) => currency.symbol === "USDC"), "Arc T
 const orderId = `GH-SMOKE-${Date.now()}`;
 const created = await request("POST", "/payments", {
   body: {
-    amount: "0.000100",
+    amount: "0.001000",
     currency: "USDC",
     network: "arc-testnet",
     order_id: orderId,
